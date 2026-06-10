@@ -1,15 +1,17 @@
 # Contribution [#]: [Issue Title]
 
-**Contribution Number:** [1 / 2 / 3]  
-**Student:** [Your Name]  
-**Issue:** [GitHub issue link]  
-**Status:** [Phase I / Phase II / Phase III / Phase IV] [In Progress / Complete]
+**Contribution Number:** [1]  
+**Student:** [Andrew Garcia Leopold]  
+**Issue:** [GitHub issue link](https://github.com/marimo-team/marimo-lsp/issues/181)
+**Status:** [Phase I] [Complete]
 
 ---
 
 ## Why I Chose This Issue
 
-[1-2 paragraphs explaining why this issue interests you, how it matches your skills/learning goals, what you hope to learn]
+I chose marimo-lsp issue #181, “Feature Request: Auto export to html/ipynb,” because it connects well with my experience in Python, JavaScript, Git, and web application development. The issue interests me because it involves improving a real developer tool: the marimo VS Code extension. I like that the problem is specific and understandable: users want an easier way to export marimo notebooks to HTML or ipynb directly from the extension workflow.
+
+This issue also matches my learning goals because I want to better understand how VS Code extensions work, how they connect to Python-based tools, and how commands are added to an existing open-source project. From reading the issue and related code, I understand that marimo-lsp already has some notebook export functionality in the codebase, so this contribution would likely involve adding or improving an extension command rather than building the entire export system from scratch. I hope to learn more about TypeScript, editor tooling, command registration, and how open-source projects structure features that connect frontend editor actions with backend notebook functionality.
 
 ---
 
