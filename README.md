@@ -1,9 +1,10 @@
 # Contribution [#]: [Issue Title]
 
 **Contribution Number:** [1]  
-**Student:** [Andrew Garcia Leopold]  
+**Student:** [Andrew Garcia Leopold](https://github.com/AvocadoGG1)  
 **Issue:** [GitHub issue link](https://github.com/marimo-team/marimo-lsp/issues/181)
 **Status:** [Phase I] [Complete]
+**Fork:** [https://github.com/AvocadoGG1/su26-ai301-contribution](https://github.com/AvocadoGG1/su26-ai301-contribution)
 
 ---
 
