@@ -1,4 +1,4 @@
-# Contribution [#]: [Issue Title]
+# Contribution [1]: [Feature Request: Auto export to html/ipynb](https://github.com/marimo-team/marimo-lsp/issues/181)
 
 **Contribution Number:** [1]  
 **Student:** [Andrew Garcia Leopold](https://github.com/AvocadoGG1)  
