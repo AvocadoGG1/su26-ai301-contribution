@@ -187,21 +187,70 @@ Commits will be added to this branch as implementation progresses.
 
 ## Implementation Notes
 
-### Week [X] Progress
+### Week 6/22/2026 Progress
 
-[What you built this week, challenges faced, decisions made]
+This week I worked on Issue #181: adding auto-export support for marimo notebooks in the VS Code extension. I implemented new settings that let users automatically export notebook outputs to HTML and/or IPYNB after cell outputs change.
 
-### Week [Y] Progress
+What I built:
+- Added `marimo.export.autoHtml` setting to enable automatic HTML export.
+- Added `marimo.export.autoIpynb` setting to enable automatic IPYNB export.
+- Added `marimo.export.autoDelayMs` setting to control the delay before exporting.
+- Added an `AutoExport` feature that listens for notebook output changes.
+- Auto-exported files are saved into a `__marimo__` folder next to the notebook file.
+- Added tests for disabled auto-export, enabled HTML/IPYNB export, and generated export paths.
+- Updated the extension README with the new settings.
 
-[Continue documenting as you work]
+Challenges faced:
+- Understanding how the VS Code extension communicates with the marimo language server.
+- Finding the right existing export commands to reuse instead of creating a separate export system.
+- Making the feature run automatically only when notebook outputs change.
+- Fixing a full test-suite timeout by slightly increasing the timeout for activation smoke tests.
 
-### Code Changes
+Decisions made:
+- I reused the existing LSP export commands: `export-as-html` and `export-as-ipynb`.
+- I made auto-export disabled by default so existing users are not affected.
+- I used resource-scoped VS Code settings so export behavior can be configured per workspace or notebook.
+- I added a short delay/debounce so repeated output changes do not immediately trigger multiple overlapping exports.
 
-- **Files modified:** [List]
-- **Key commits:** [Links to important commits]
-- **Approach decisions:** [Why you chose certain approaches]
+Week [3] Progress
 
----
+Continued implementation and validation for Issue #181.
+
+What I completed:
+- Ran targeted tests for the new auto-export feature.
+- Ran the full extension test suite.
+- Ran lint/type/format checks.
+- Ran the build process.
+- Committed the implementation and pushed the working branch to my fork.
+
+Current status:
+- Feature implementation is complete locally.
+- Branch has been pushed to GitHub.
+- Tests and build are passing.
+
+Code Changes
+
+Files modified:
+- `extension/src/features/AutoExport.ts`
+- `extension/src/features/__tests__/AutoExport.test.ts`
+- `extension/src/features/Main.ts`
+- `extension/src/platform/VsCode.ts`
+- `extension/src/__mocks__/TestVsCode.ts`
+- `extension/src/__tests__/extension.test.ts`
+- `extension/package.json`
+- `extension/README.md`
+
+Key commits:
+- `254f380 feat: add notebook auto export settings`
+- Commit link: https://github.com/AvocadoGG1/marimo-lsp/commit/254f380
+- Branch link: https://github.com/AvocadoGG1/marimo-lsp/tree/fix-issue-181
+
+Approach decisions:
+- Reused existing marimo export APIs instead of duplicating export logic.
+- Added settings to `package.json` so the feature is configurable through VS Code.
+- Kept auto-export off by default to avoid surprising users.
+- Exported files into `__marimo__` to match the behavior described in the issue.
+- Added automated tests around the new behavior to confirm exports only happen when enabled and after output changes.
 
 ## Pull Request
 
